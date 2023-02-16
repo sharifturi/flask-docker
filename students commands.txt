@@ -1,0 +1,27 @@
+git remote add origin https://github.com/sharifturi/flask-docker
+
+git push --set-upstream origin master
+
+1: Creat dockerfile
+
+2: builde docker image =>
+
+	docker image build -t flask_docker .
+
+$ docker images
+
+3: create containers
+
+	docker create --name flask_docker_container flask_docker
+			Or
+	$ docker run -it --name flask_docker_container flask_docker
+
+	docker container ls
+
+4: Delete Container
+
+	docker rm admiring_saha
+
+5: docker ps -a
+
+//This command stop all the containers 
