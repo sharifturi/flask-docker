@@ -1,6 +1,8 @@
 //git procces
 
-git remote add origin https://github.com/sharifturi/flask-docker
+git clone https://github.com/sharifturi/flask-docker-project.git
+
+git remote add origin https://github.com/sharifturi/flask-docker-project.git
 
 git push --set-upstream origin master
 
