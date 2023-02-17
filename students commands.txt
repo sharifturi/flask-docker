@@ -1,27 +1,44 @@
+//git procces
+
 git remote add origin https://github.com/sharifturi/flask-docker
 
 git push --set-upstream origin master
+
+
+// Docker Proccess
 
 1: Creat dockerfile
 
 2: builde docker image =>
 
 	docker image build -t flask_docker .
-
-$ docker images
+	
+	$ docker images
 
 3: create containers
 
-	docker create --name flask_docker_container flask_docker
+	$ docker create --name flask_docker_container flask_docker
 			Or
 	$ docker run -it --name flask_docker_container flask_docker
 
-	docker container ls
+	$ docker container ls
+	
+	$ docker start flask_docker_container
+	
+	$ docker run -p 5000:5000 -d flask_docker
 
 4: Delete Container
 
-	docker rm admiring_saha
+	docker rm container_name
 
 5: docker ps -a
 
 //This command stop all the containers 
+
+// Push docker iamges to docker-hub repository
+
+	$ docker tag flask_docker eliadev1214/flask-docker
+
+	$ docker push eliadev1214/flask-docker
+
+	$ docker pull eliadev1214/flask-docker
